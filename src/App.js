@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from "react"
 import './App.css';
 
 function App() {
+
+  const APP_ID = "5f380e2b"
+ const APP_KEY =  "d4be733546f6bdc4eda747d629e5cb08"
+  const URL = ` https://api.edamam.com/search?q=biryani&app_id=${APP_ID}&app_key=${APP_KEY} `
+
+
+  const [search , setSearch] = useState("")
+
+
+  function handleChange(e){
+    console.log(e.target.value);
+    setSearch(e.target.value)
+  }
+
+  
+
+  useEffect( ()=> {
+    console.log(' i am rendered')
+  },[search])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <form className= 'search-form'>
+     <input className= 'search-input' type= 'text' value= {search} onChange= {handleChange}/>
+     <button  className='search-button' type= 'submit'>Search </button>
+        
+     </form>
     </div>
   );
 }
