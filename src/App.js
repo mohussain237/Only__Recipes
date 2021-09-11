@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import axios from "axios";
 import './App.css';
 
 function App() {
@@ -10,6 +11,13 @@ function App() {
 
   const [search , setSearch] = useState("")
 
+ const getRecipes = async ()=>{
+   const res = await fetch (` https://api.edamam.com/search?q=biryani&app_id=${APP_ID}&app_key=${APP_KEY}`)
+   const data = await res.json()
+   console.log(data);
+
+
+
 
   function handleChange(e){
     console.log(e.target.value);
@@ -19,8 +27,8 @@ function App() {
   
 
   useEffect( ()=> {
-    console.log(' i am rendered')
-  },[search])
+    getRecipes()
+  },[])
 
   return (
     <div>
