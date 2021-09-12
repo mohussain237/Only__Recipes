@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+
 import "./App.css";
 import "./index.css";
 import Products from "./products";
@@ -37,7 +37,7 @@ function App() {
   }, [query]);
 
   return (
-    <div>
+    <div className="App">
       <form className="search-form" onSubmit={onSubmitQuery}>
         <input
           className="search-input"
@@ -49,6 +49,8 @@ function App() {
           Search
         </button>
       </form>
+      
+      <div className= "recipe">
       {recipes.map((food) => (
         <Products
           key={Math.floor(Math.random()*1000)}
@@ -58,6 +60,8 @@ function App() {
           ingredients= {food.recipe.ingredients}
         />
       ))}
+      </div>
+      
     </div>
   );
 }
