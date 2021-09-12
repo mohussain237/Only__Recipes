@@ -1,0 +1,26 @@
+.box {
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgb(71, 71, 71);
+    background-color: silver;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    min-width: 40%;
+    align-items: center;
+    border-style: 3px solid;
+}
+
+.title {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.text{
+    font-size: 20px;
+}
+.kcal {
+    font-size: 25px;
+    margin-top: 0;
+    color: tomato;
+
+}
