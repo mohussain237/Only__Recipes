@@ -5,12 +5,9 @@ const Products = ({title, calories, image, ingredients}) =>{
         <div>
        
         <h1>{ title}</h1>
-        <ul>
-        { ingredients.map ((ingr)=> (
-            <li> {ingr.ingredients.text}</li>
-
-        ))}
-        </ul>
+      <ul> {ingredients.map((ingnt)=> (
+          <li> {ingnt.text}</li>
+      )) }</ul>
         <img src= {image} alt={title}/>
         <p> KCal: {calories}</p>
         
