@@ -1,15 +1,15 @@
 import React from "react"
-
+import style from "./product.css"
 const Products = ({title, calories, image, ingredients}) =>{
     return (
-        <div>
+        <div className= {style.box}>
        
-        <h1>{ title}</h1>
+        <h2 className= {style.title}>{ title}</h2>
       <ul> {ingredients.map((ingnt)=> (
-          <li> {ingnt.text}</li>
+          <li className= {style.text}> {ingnt.text}</li>
       )) }</ul>
-        <img src= {image} alt={title}/>
-        <p> KCal: {calories}</p>
+        <img src= {image} alt={title} className= {style.image}/>
+        <h4 className={style.kcal}> Calories :- {calories}</h4>
         
         
         </div>
