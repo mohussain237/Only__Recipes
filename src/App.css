@@ -1,36 +1,37 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.App {
+  min-height: 100vh;
+  background-image: radial-gradient(
+    circle 780.6px at 18% 20%,
+    rgb(229, 157, 217) 0%,
+    rgb(152, 161, 201) 90.7%
+  );
 }
 
-form {
-
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.search-form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.search-input {
-    padding: 10px;
-    width: 30%; 
-    font-size: 20px;
-    border-radius: 8px;
-    
-    /* border-style: none; */
+input {
+  width: 40%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .search-button {
-    margin-left: 3px;
-    width: 5px%;
-    padding: 10px;
-    letter-spacing: 2px;
-    color: #ffff;
-    background-color: rgb(85, 85, 214);
-    /* border-style: none; */
-    font-size: 20px;
-    border-radius: 8px;
+  background-color: rgb(184, 195, 214);
+  padding: 14px 18px;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-/* .search-button  */
+.recipe {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
